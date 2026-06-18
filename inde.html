@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<title>MEL MODA FITNESS</title>
+<meta name="description" content="Site oficial da Mel Moda Fitness - Comércio varejista de artigos esportivos em Santos, SP.">
+<meta property="og:title" content="MEL MODA FITNESS">
+<meta property="og:description" content="Comércio varejista de artigos esportivos em Santos, SP.">
+<meta property="og:type" content="website">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Arial, Helvetica, sans-serif; background: #f5f5f5; color: #222; }
+
+  .header {
+    background: #c2185b;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px 30px;
+    border-bottom: 4px solid #ff80ab;
+  }
+  .header .logo-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #ff80ab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #c2185b;
+    letter-spacing: 1px;
+  }
+  .header h1 { font-size: 22px; font-weight: bold; letter-spacing: 1px; margin-bottom: 6px; }
+  .header .cnpj { font-size: 14px; color: #ff80ab; letter-spacing: 2px; }
+
+  .login-label {
+    background: #880e4f;
+    text-align: center;
+    padding: 8px;
+    color: #eee;
+    font-size: 13px;
+    border-bottom: 1px solid #ad1457;
+  }
+
+  .section {
+    max-width: 800px;
+    margin: 28px auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 28px 28px 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  }
+  .section h2 {
+    font-size: 18px;
+    color: #c2185b;
+    border-left: 4px solid #ff80ab;
+    padding-left: 12px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .section p { font-size: 15px; line-height: 1.75; color: #333; margin-bottom: 10px; }
+
+  .missao {
+    background: #c2185b;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 32px 24px;
+  }
+  .missao h2 { color: #ff80ab; font-size: 16px; letter-spacing: 2px; margin-bottom: 14px; }
+  .missao p { font-size: 15px; line-height: 1.8; max-width: 680px; margin: 0 auto; }
+
+  .contato-bar {
+    background: #ff80ab;
+    color: #7b0039;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+  .contato-bar a { color: #7b0039; text-decoration: none; }
+
+  .services-list { list-style: none; padding: 0; }
+  .services-list li {
+    padding: 7px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .services-list li:last-child { border-bottom: none; }
+  .services-list li::before { content: "✔"; color: #c2185b; font-weight: bold; font-size: 13px; }
+
+  .info-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .info-table tr { border-bottom: 1px solid #f0f0f0; }
+  .info-table tr:last-child { border-bottom: none; }
+  .info-table td { padding: 7px 4px; color: #333; }
+  .info-table td:first-child { color: #666; width: 52%; }
+  .info-table td:last-child { font-weight: 600; color: #c2185b; }
+
+  .cta-wrap { text-align: center; padding: 28px 16px; }
+  .cta-btn {
+    display: inline-block;
+    background: #25d366;
+    color: #fff;
+    padding: 14px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+  .cta-btn:hover { background: #1da851; }
+
+  .insta-btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: #fff;
+    padding: 10px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  footer {
+    background: #880e4f;
+    color: #f8bbd0;
+    padding: 32px 24px;
+    font-size: 13px;
+    line-height: 2;
+  }
+  footer .footer-inner { max-width: 800px; margin: 0 auto; }
+  footer h3 { color: #ff80ab; font-size: 14px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+  footer p { margin-bottom: 4px; }
+  footer .copy { margin-top: 20px; border-top: 1px solid #ad1457; padding-top: 14px; color: #f48fb1; font-size: 12px; }
+
+  .politica {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 24px 28px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    font-size: 13px;
+    color: #555;
+    line-height: 1.75;
+  }
+  .politica h3 { font-size: 15px; color: #c2185b; margin: 16px 0 6px; }
+  .politica h2 { font-size: 17px; color: #c2185b; border-left: 4px solid #ff80ab; padding-left: 10px; margin-bottom: 14px; text-transform: uppercase; }
+
+  @media (max-width: 600px) {
+    .section, .politica { margin: 16px 12px; padding: 18px 16px; }
+    .header h1 { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="login-label">LOGIN</div>
+
+<header class="header">
+  <div class="logo-circle">MEL</div>
+  <h1>MEL MODA FITNESS</h1>
+  <div class="cnpj">26.423.733/0001-22</div>
+</header>
+
+<div class="missao">
+  <h2>NOSSA MISSÃO:</h2>
+  <p><strong>Oferecer moda fitness de qualidade, unindo estilo e funcionalidade para quem busca bem-estar, saúde e confiança em cada movimento. Atendemos com dedicação e amor ao esporte em Santos e região.</strong></p>
+</div>
+
+<div class="contato-bar">
+  📞 CONTATO &nbsp;|&nbsp; E-mail: contato@melmodafitness.com.br
+</div>
+
+<div style="text-align:center; padding: 12px;">
+  <a href="#" class="insta-btn">📷 INSTAGRAM</a>
+</div>
+
+<div class="section">
+  <h2>Quem Somos?</h2>
+  <p>
+    A <strong>MEL MODA FITNESS</strong>, registrada sob o CNPJ 26.423.733/0001-22, foi fundada em 26 de outubro de 2016 por Melissa La Terza Machado, em Santos - SP. Com quase 10 anos de atuação, a empresa se tornou referência em comércio varejista de artigos esportivos na cidade.
+  </p>
+  <p>
+    Localizada na Rua Ceará, 67, Anexo Interno, Bairro Pompeia, Santos - SP, a Mel Moda Fitness oferece produtos fitness com foco em estilo, conforto e qualidade. Atendemos clientes que buscam se vestir bem para a academia, esportes ao ar livre e o dia a dia ativo.
+  </p>
+  <p>
+    Com Inscrição Estadual SP 633.733.191.112, optante pelo Simples Nacional desde a data de abertura, a empresa mantém compromisso com o crescimento sustentável e o melhor atendimento ao cliente.
+  </p>
+
+  <h2 style="margin-top: 22px;">Produtos e Serviços Disponíveis:</h2>
+  <ul class="services-list">
+    <li>47.63-6-02 — Comércio varejista de artigos esportivos (atividade principal)</li>
+  </ul>
+
+  <h2 style="margin-top: 22px;">Informações da Empresa:</h2>
+  <table class="info-table">
+    <tr><td>Razão Social</td><td>Melissa La Terza Machado</td></tr>
+    <tr><td>Nome Fantasia</td><td>MEL MODA FITNESS</td></tr>
+    <tr><td>CNPJ</td><td>26.423.733/0001-22</td></tr>
+    <tr><td>Inscrição Estadual SP</td><td>633.733.191.112</td></tr>
+    <tr><td>Data de Abertura</td><td>26/10/2016</td></tr>
+    <tr><td>Porte</td><td>MICRO EMPRESA</td></tr>
+    <tr><td>Natureza Jurídica</td><td>Empresário (Individual)</td></tr>
+    <tr><td>Opção pelo MEI</td><td>Não</td></tr>
+    <tr><td>Simples Nacional</td><td>Sim (desde 26/10/2016)</td></tr>
+    <tr><td>Situação Cadastral</td><td>Ativa</td></tr>
+    <tr><td>Data Situação Cadastral</td><td>26/10/2016</td></tr>
+    <tr><td>Tipo</td><td>Matriz</td></tr>
+    <tr><td>Capital Social</td><td>R$ 5.000,00</td></tr>
+  </table>
+
+  <h2 style="margin-top: 22px;">Localização e Contato:</h2>
+  <table class="info-table">
+    <tr><td>Logradouro</td><td>Rua Ceará, 67</td></tr>
+    <tr><td>Complemento</td><td>Anexo Interno</td></tr>
+    <tr><td>Bairro</td><td>Pompeia</td></tr>
+    <tr><td>CEP</td><td>11065-430</td></tr>
+    <tr><td>Município</td><td>Santos</td></tr>
+    <tr><td>Estado</td><td>São Paulo</td></tr>
+    <tr><td>E-mail</td><td>contato@melmodafitness.com.br</td></tr>
+  </table>
+
+  <h2 style="margin-top: 22px;">Atividade CNAE:</h2>
+  <table class="info-table">
+    <tr><td>Código Principal</td><td>47.63-6-02</td></tr>
+    <tr><td>Descrição</td><td>Comércio varejista de artigos esportivos</td></tr>
+    <tr><td>Tipo</td><td>Atividade Principal</td></tr>
+  </table>
+</div>
+
+<div class="cta-wrap">
+  <p style="margin-bottom: 14px; font-size: 15px; color: #444;">Fale comigo:</p>
+  <a class="cta-btn" href="https://wa.me/5513900000000?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.">
+    💬 CONVERSAR AGORA
+  </a>
+</div>
+
+<div class="politica">
+  <h2>Política de Privacidade</h2>
+  <p><strong>MEL MODA FITNESS &nbsp;|&nbsp; Melissa La Terza Machado &nbsp;|&nbsp; CNPJ: 26.423.733/0001-22</strong><br>
+  Endereço: Rua Ceará, 67, Anexo Interno, Bairro Pompeia, Santos - SP, CEP 11065-430</p>
+
+  <h3>1. Finalidade</h3>
+  <p>Esta política descreve como coletamos, utilizamos, armazenamos e protegemos os dados pessoais dos clientes, usuários e visitantes que interagem conosco por meio de nossos serviços digitais, redes sociais, e-mail, telefone ou durante a prestação de serviços e comercialização de produtos.</p>
+
+  <h3>2. Dados Coletados</h3>
+  <p>Informações fornecidas voluntariamente: Nome, e-mail, telefone, endereço e dados necessários para a efetivação de compras ou atendimento. Dados técnicos e de navegação: Endereço IP, tipo de dispositivo e interações em nossos canais online, quando aplicável.</p>
+
+  <h3>3. Uso dos Dados</h3>
+  <p>Processamento de pedidos, entrega de produtos e suporte ao cliente. Comunicação sobre novidades, promoções e pedidos. Cumprimento de obrigações legais e fiscais.</p>
+
+  <h3>4. Compartilhamento de Dados</h3>
+  <p>Não comercializamos ou compartilhamos dados pessoais com terceiros para fins publicitários não autorizados. Dados podem ser compartilhados com parceiros logísticos para entrega de pedidos, ou com autoridades legais mediante requisição formal.</p>
+
+  <h3>5. Direitos do Titular (LGPD)</h3>
+  <p>Você tem direito a acessar, corrigir ou atualizar seus dados pessoais; solicitar a exclusão dos dados; revogar o consentimento para uso de dados; e solicitar portabilidade de dados.</p>
+
+  <h3>6. Segurança e Armazenamento</h3>
+  <p>Implementamos medidas técnicas e administrativas para proteger os dados contra acesso não autorizado, alteração ou destruição.</p>
+
+  <h3>7. Alterações nesta Política</h3>
+  <p>Esta política pode ser atualizada periodicamente. Alterações serão comunicadas por nossos canais oficiais.</p>
+
+  <h3>8. Contato para Privacidade</h3>
+  <p>E-mail: contato@melmodafitness.com.br<br>
+  Endereço postal: Rua Ceará, 67, Anexo Interno, Bairro Pompeia, Santos - SP, CEP 11065-430</p>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <h3>Rodapé &amp; Informações</h3>
+    <p>MEL MODA FITNESS</p>
+    <p>Razão Social: Melissa La Terza Machado</p>
+    <p>CNPJ: 26.423.733/0001-22</p>
+    <p>Inscrição Estadual SP: 633.733.191.112</p>
+    <p>Data de Abertura: 26/10/2016</p>
+    <p>Porte: MICRO EMPRESA</p>
+    <p>Natureza Jurídica: Empresário (Individual)</p>
+    <p>Simples Nacional: Sim (desde 26/10/2016)</p>
+    <p>Situação Cadastral: Ativa</p>
+    <p>Tipo: Matriz</p>
+    <p>Capital Social: R$ 5.000,00</p>
+    <p>CNAE Principal: 47.63-6-02 — Comércio varejista de artigos esportivos</p>
+    <p>Endereço: Rua Ceará, 67, Anexo Interno, Pompeia, Santos - SP, CEP 11065-430</p>
+    <p>E-mail: contato@melmodafitness.com.br</p>
+    <div class="copy">© 2026 MEL MODA FITNESS — Melissa La Terza Machado. Todos os direitos reservados.</div>
+  </div>
+</footer>
+
+</body>
+</html>
